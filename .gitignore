@@ -54,6 +54,17 @@ hs_err_pid*
 
 
 
+
+
+
+
+###########################
+### Kate
+###########################
+*.kate-swp
+
+
+
 ###########################
 ### Netbeans
 ###########################
@@ -66,6 +77,14 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+nbproject/
+manifest.mf
+build.xml
+
+
+
+
 
 
 
