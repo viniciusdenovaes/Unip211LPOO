@@ -2,15 +2,16 @@ public class Aluno {
     
     public String ra;
     public String nome;
-    public Nota notaNP1 = new Nota();
-    public Nota notaNP2 = new Nota();
+    public Boletim boletim = new Boletim();
     
     public void relatorio(){
         System.out.println("ra: " + this.ra);
         System.out.println("nome: " + this.nome);
-        System.out.println("NP1: " + this.notaNP1.valor);
-        System.out.println("NP1: " + this.notaNP2.valor);
-        double media = (this.notaNP1.valor + this.notaNP2.valor) / 2.0;
+        System.out.println("NP1: " + this.boletim.notaNP1.valor);
+        System.out.println("NP1: " + this.boletim.notaNP2.valor);
+        double media = (
+                this.boletim.notaNP1.valor + 
+                this.boletim.notaNP2.valor) / 2.0;
         if(media>=7.0){
             System.out.println("O aluno passou");
         }
