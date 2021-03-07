@@ -3,6 +3,11 @@ public class Aluno {
     public String ra;
     public String nome;
     public Boletim boletim = new Boletim();
+
+    public Aluno(String aRa, String aNome) {
+        this.ra = aRa;
+        this.nome = aNome;
+    }
     
     public void setNotaNP1(double valor){
         this.boletim.setNotaNP1(valor);

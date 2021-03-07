@@ -6,6 +6,8 @@ public class TesteAluno {
         aluno.setNotaNP2(10);
         
         aluno.relatorio();
+        
+        System.out.println(aluno);
     }
     
 }
