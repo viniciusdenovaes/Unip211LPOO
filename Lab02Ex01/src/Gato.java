@@ -1,11 +1,11 @@
-public class Cachorro {
+public class Gato {
     
     private String nome;
     private int idade;
     private double peso;
     private boolean isDoente;
 
-    public Cachorro(String aNome, int aIdade, double aPeso) {
+    public Gato(String aNome, int aIdade, double aPeso) {
         this.nome = aNome;
         this.idade = aIdade;
         this.peso = aPeso;
@@ -32,21 +32,15 @@ public class Cachorro {
         this.idade++;
     }
     
-    public void latir(){
-        if(this.peso<4.0){
-            System.out.println("au au au");
-        }else if(this.peso>=4.0 && this.idade<=10.0){
-            System.out.println("AU AU AU");
-        }else if(this.peso>=4.0 && this.idade>10.0){
-            System.out.println("ROOF ROOF ROOF");
-        }
+    public void miar(){
+        System.out.println("miaaaauu");
     }
     
     public void dormir(){
-        System.out.println("foi dormir no sofa");
+        System.out.println("foi dormir no alto");
     }
     public void comer(){
-        System.out.println("comendo ração de cachorro");
+        System.out.println("comendo ração de gato");
     }
     public void darInjecao(){
         this.isDoente = false;

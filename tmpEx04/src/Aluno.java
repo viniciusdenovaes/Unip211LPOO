@@ -2,16 +2,15 @@ public class Aluno {
     
     public String ra;
     public String nome;
-    public Nota notaNP1;
-    public Nota notaNP2;
+    public Boletim boletim;
     
     public Aluno(){
-        this.notaNP1 = new Nota();
-        this.notaNP2 = new Nota();
+        this.boletim = new Boletim();
     }
     
     public double media(){
-        return (notaNP1.valor+notaNP2.valor)/2.;
+        return (boletim.notaNP1.valor+
+                boletim.notaNP2.valor)/2.;
     }
     
     public boolean isPassou(){
@@ -21,8 +20,8 @@ public class Aluno {
     public void relatorio(){
         System.out.println("Ra: " + ra);
         System.out.println("Nome: " + nome);
-        System.out.println("Nota NP1: " + notaNP1.valor);
-        System.out.println("Nota NP2: " + notaNP2.valor);
+        System.out.println("Nota NP1: " + boletim.notaNP1.valor);
+        System.out.println("Nota NP2: " + boletim.notaNP2.valor);
         System.out.println("Media: " + media());
         if(isPassou()){
             System.out.println("O aluno passou");
