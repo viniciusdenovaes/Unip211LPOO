@@ -1,4 +1,7 @@
+package teste;
 
+
+import entidade.Gato;
 import java.util.ArrayList;
 
 public class TesteGato {

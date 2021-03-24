@@ -1,11 +1,13 @@
-public class Gato {
+package entidade;
+
+public class Cachorro {
     
     private String nome;
     private int idade;
     private double peso;
     private boolean isDoente;
 
-    public Gato(String aNome, int aIdade, double aPeso) {
+    public Cachorro(String aNome, int aIdade, double aPeso) {
         this.nome = aNome;
         this.idade = aIdade;
         this.peso = aPeso;
@@ -32,15 +34,21 @@ public class Gato {
         this.idade++;
     }
     
-    public void miar(){
-        System.out.println("miaaaauu");
+    public void latir(){
+        if(this.peso<4.0){
+            System.out.println("au au au");
+        }else if(this.peso>=4.0 && this.idade<=10.0){
+            System.out.println("AU AU AU");
+        }else if(this.peso>=4.0 && this.idade>10.0){
+            System.out.println("ROOF ROOF ROOF");
+        }
     }
     
     public void dormir(){
-        System.out.println("foi dormir no alto");
+        System.out.println("foi dormir no sofa");
     }
     public void comer(){
-        System.out.println("comendo ração de gato");
+        System.out.println("comendo ração de cachorro");
     }
     public void darInjecao(){
         this.isDoente = false;

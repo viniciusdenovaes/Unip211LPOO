@@ -1,4 +1,7 @@
+package teste;
 
+
+import entidade.Cachorro;
 import java.util.ArrayList;
 
 public class TesteCachorro {
