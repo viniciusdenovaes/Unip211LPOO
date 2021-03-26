@@ -5,41 +5,23 @@ import java.util.ArrayList;
 public class Cuidador {
     
     private String nome;
-    private ArrayList<Cachorro> cachorros;
-    private ArrayList<Gato> gatos;
-    private ArrayList<Pato> patos;
+    private ArrayList<Animal> animais;
 
     public Cuidador(String aNome) {
         this.nome = aNome;
-        this.cachorros = new ArrayList<Cachorro>();
-        this.gatos = new ArrayList<Gato>();
-        this.patos = new ArrayList<Pato>();
+        this.animais = new ArrayList<Animal>();
     }
 
     public String getNome() {
         return nome;
     }
 
-    public ArrayList<Cachorro> getCachorros() {
-        return cachorros;
-    }
-
-    public ArrayList<Gato> getGatos() {
-        return gatos;
-    }
-
-    public ArrayList<Pato> getPatos() {
-        return patos;
+    public ArrayList<Animal> getAnimais() {
+        return this.animais;
     }
     
-    public void addCachorro(Cachorro cachorro){
-        this.cachorros.add(cachorro);
-    }
-    public void addGato(Gato gato){
-        this.gatos.add(gato);
-    }
-    public void addPato(Pato pato){
-        this.patos.add(pato);
+    public void addAnimal(Animal animal){
+        this.animais.add(animal);
     }
     
     

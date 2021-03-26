@@ -35,6 +35,11 @@ public class Cachorro extends Animal {
         return "Cachorro";
     }
     
+    public static void main(String[] args) {
+        Cachorro c1 = new Cachorro("fuloano", 2, 3);
+        System.out.println(c1);
+    }
+    
     
     
 }

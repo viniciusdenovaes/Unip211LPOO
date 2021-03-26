@@ -50,6 +50,18 @@ abstract public class Animal {
     }
     
     
+    @Override
+    public String toString(){
+        String resultado = "";
+        resultado += "Animal da raca " + this.getRaca() + "\n";
+        resultado += "Nome: " + this.getNome() + "\n";
+        resultado += "Idade: " + this.getIdade() + "\n";
+        resultado += "Peso: " + this.getPeso() + "\n";
+        resultado += "Esta doente? " + this.getIsDoente() + "\n";
+        return resultado;
+    }
+    
+    
     
     
     
