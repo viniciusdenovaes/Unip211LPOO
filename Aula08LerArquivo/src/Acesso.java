@@ -6,21 +6,20 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-public class LerArquivo {
+public class Acesso {
     
     public static void lerArquivo(){
         
-        InputStream is;
-        InputStreamReader isr;
-        BufferedReader br;
         
-        try {
-            is = new FileInputStream("files/arquivo.in");
-            isr = new InputStreamReader(is, StandardCharsets.UTF_8);
-            br = new BufferedReader(isr);
+        
+        try (   InputStream is = new FileInputStream("files/arquivo.in"); 
+                InputStreamReader isr = new InputStreamReader(is, StandardCharsets.UTF_8);
+                BufferedReader br = new BufferedReader(isr);
+            ){
             String linha;
+            int i=0;
             while((linha = br.readLine()) != null){
-                System.out.println(linha);
+                System.out.println("linha numero " + i++ + " - " + linha);
             }
             
         }catch(IOException e){
