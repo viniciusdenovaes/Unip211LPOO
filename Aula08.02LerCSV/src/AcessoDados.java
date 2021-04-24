@@ -1,15 +1,19 @@
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AcessoDados {
-    public static List<Animal> lerArquivo(String filePath){
+    public static List<Animal> loadAnimais(String filePath){
         
         List<Animal> animais = new ArrayList<>();
         
@@ -43,6 +47,22 @@ public class AcessoDados {
         }
         
         return animais;
+        
+    }
+    
+    public static void saveAnimais(List<Animal> animais, String filePath){
+        
+        try(    OutputStream os = new FileOutputStream(filePath/*, true*/);
+                OutputStreamWriter osw = new OutputStreamWriter(os, StandardCharsets.UTF_8);
+                PrintWriter pw = new PrintWriter(osw, true);
+                ){
+            for(Animal animal: animais){
+                pw.println(animal.getNome()+","+animal.getIdade()+","+animal.getPeso());
+            }
+            
+        }catch(IOException e){
+            e.printStackTrace();
+        }
         
     }
     
